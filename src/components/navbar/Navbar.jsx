@@ -25,7 +25,7 @@ function Navbar() {
 
                 <div className=' flex w-[35%] items-center'>
 
-                    <div className='w-[100%] px-3 py-2 border rounded-l-full'>
+                    <div className='w-[100%] px-3 py-2 border border-gray-300 rounded-l-full'>
                         <input
                             type='text'
                             placeholder='search'
