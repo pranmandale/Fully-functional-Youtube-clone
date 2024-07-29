@@ -14,7 +14,7 @@ import plogo from '../../assets/plogo.jpg'
 function Navbar() {
     return (
         <>
-            <div className='flex justify-between px-6 py-2'>
+            <div className='flex justify-between fixed top-0 w-[100%] bg-white px-6 py-2'>
 
                 <div className='flex items-center space-x-4 '>
                     {/* menubar and logo */}
