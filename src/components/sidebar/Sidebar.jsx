@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Avatar from 'react-avatar';
 import { GoHome } from "react-icons/go";
@@ -188,7 +187,7 @@ function Sidebar() {
     ];
 
     return (
-        <div className='px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-16'>
+        <div className='px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-y-scroll'>
             {/* home */}
             <div className='space-y-3 items-center'>
                 {sidebar.map((item) => (

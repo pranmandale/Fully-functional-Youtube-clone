@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "abbreviation": "^0.0.0",
     "axios": "^1.7.2",
+    "js": "^0.1.0",
+    "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-avatar": "^5.0.3",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.25.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
