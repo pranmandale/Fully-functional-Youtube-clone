@@ -6,13 +6,17 @@ import { Route, Routes } from 'react-router-dom'
 import Search from './components/search/Search'
 import Home from './components/home/Home'
 import Playvideo from './components/playvideo/Playvideo'
+import Loading from './loader/Loading'
 
 function App() {
   // const {loading, data} = useAuth();
   // console.log(loading)
   // console.log(data)
+  const {loading} = useAuth();
+
   return (
     <>
+      {loading && <Loading/>}
       <Navbar />
       {/* <Sidebar/> */}
       <Routes>

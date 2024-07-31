@@ -25,7 +25,7 @@ function Navbar() {
 
                 <div className=' flex w-[35%] items-center'>
 
-                    <div className='w-[100%] px-3 py-2 border border-gray-300 rounded-l-full'>
+                    <div className='w-[100%] px-4 py-2 border border-gray-400 rounded-l-full'>
                         <input
                             type='text'
                             placeholder='search'
@@ -33,21 +33,22 @@ function Navbar() {
                         />
                     </div>
 
-                    <button className='px-4 py-2  rounded-r-full bg-gray-100'>
+                    <button className='px-4 py-2 bg-gray-100 border border-gray-400 rounded-r-full'>
                         <CiSearch size={"24px"} />
                     </button>
 
-                    <IoMdMic size={"40px"} className='ml-3 border  p-2 cursor-pointer rounded-full 
-                    hover:bg-gray-200 duration-200'/>
+                    <IoMdMic size={"40px"} className='p-2 ml-3 duration-200 border rounded-full cursor-pointer hover:bg-gray-200'/>
 
                 </div>
 
 
 
-                <div className='flex space-x-5 items-center'>
+                <div className='flex items-center space-x-5 '>
                 <RiVideoAddLine className='text-2xl'/>
                 <AiOutlineBell className='text-2xl'/>
-                <Avatar src={plogo} alt='' size={"32"} round={true}/>
+                <Avatar src={plogo} alt='' size={"32"} round={true}
+                    className='cursor-pointer'
+                />
                 </div>
             </div>
 

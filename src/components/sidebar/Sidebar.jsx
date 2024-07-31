@@ -187,11 +187,11 @@ function Sidebar() {
     ];
 
     return (
-        <div className='px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-y-scroll'>
-            {/* home */}
-            <div className='space-y-3 items-center'>
+        <div className='px-6 w-[30%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-y-scroll'>
+            {/* first section */}
+            <div className='items-center space-y-3'>
                 {sidebar.map((item) => (
-                    <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-200 rounded-xl p-1'>
+                    <div key={item.id} className='flex items-center p-1 space-x-6 hover:bg-gray-400 rounded-xl'>
                         <div className='text-xl cursor-pointer'>{item.icon}</div>
                         <span className='cursor-pointer'>{item.name}</span>
                     </div>
@@ -201,13 +201,13 @@ function Sidebar() {
             <hr />
 
             {/* second section */}
-            <div className='mt-4 space-y-3 items-center'>
+            <div className='items-center mt-4 space-y-3'>
                 <div className='flex items-center space-x-2'>
                     <h1>You</h1>
-                    <FaChevronRight />
+                    <FaChevronRight  className='cursor-pointer'/>
                 </div>
                 {sidebar2.map((item) => (
-                    <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1'>
+                    <div key={item.id} className='flex items-center p-1 space-x-6 duration-300 hover:bg-gray-200 rounded-xl'>
                         <div className='text-xl cursor-pointer'>{item.icon}</div>
                         <span className='cursor-pointer'>{item.name}</span>
                     </div>
@@ -217,12 +217,12 @@ function Sidebar() {
             <hr />
 
             {/* third section */}
-            <div className='mt-4 space-y-3 items-center'>
+            <div className='items-center mt-4 space-y-3'>
                 <div className='items-center space-x-2'>
                     <h1 className='font-semibold'>Subscription</h1>
                 </div>
                 {sidebar6.map((item) => (
-                    <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1'>
+                    <div key={item.id} className='flex items-center p-1 space-x-6 duration-300 hover:bg-gray-200 rounded-xl'>
                         <div className='text-xl cursor-pointer'>{item.icon}</div>
                         <span className='cursor-pointer'>{item.name}</span>
                     </div>
@@ -232,12 +232,12 @@ function Sidebar() {
             <hr />
 
             {/* fourth section */}
-            <div className='mt-4 space-y-3 items-center'>
+            <div className='items-center mt-4 space-y-3'>
                 <div className='items-center space-x-2'>
                     <h1 className='font-semibold'>Explore</h1>
                 </div>
                 {sidebar3.map((item) => (
-                    <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1'>
+                    <div key={item.id} className='flex items-center p-1 space-x-6 duration-300 hover:bg-gray-200 rounded-xl'>
                         <div className='text-xl cursor-pointer'>{item.icon}</div>
                         <span className='cursor-pointer'>{item.name}</span>
                     </div>
@@ -247,13 +247,13 @@ function Sidebar() {
             <hr />
 
             {/* fifth section */}
-            <div className='mt-4 space-y-3 items-center'>
+            <div className='items-center mt-4 space-y-3'>
                 <div className='items-center space-x-2'>
                     <h1 className='font-semibold'>More From Youtube</h1>
                 </div>
                 {sidebar4.map((item) => (
-                    <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1'>
-                        <div className='text-xl cursor-pointer text-red-700'>{item.icon}</div>
+                    <div key={item.id} className='flex items-center p-1 space-x-6 duration-300 hover:bg-gray-200 rounded-xl'>
+                        <div className='text-xl text-red-700 cursor-pointer'>{item.icon}</div>
                         <span className='cursor-pointer'>{item.name}</span>
                     </div>
                 ))}
@@ -262,9 +262,9 @@ function Sidebar() {
             <hr />
 
             {/* sixth section */}
-            <div className='mt-4 space-y-3 items-center'>
+            <div className='items-center mt-4 space-y-3'>
                 {sidebar5.map((item) => (
-                    <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1'>
+                    <div key={item.id} className='flex items-center p-1 space-x-6 duration-300 hover:bg-gray-200 rounded-xl'>
                         <div className='text-xl cursor-pointer'>{item.icon}</div>
                         <span className='cursor-pointer'>{item.name}</span>
                     </div>
@@ -281,7 +281,7 @@ function Sidebar() {
             </span>
             <br />
 
-            <p className='text-xs text-gray-600 mt-1'>© 2024 Pranav Mandale</p>
+            <p className='mt-1 text-xs text-gray-600'>© 2024 Pranav Mandale</p>
         </div>
     );
 }
