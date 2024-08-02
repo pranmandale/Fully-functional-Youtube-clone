@@ -11,6 +11,7 @@ const options = {
 
 export const fetchdata = async(url) => {
     try {
+        
         const {data} = await axios.get(`${BASE_URL}/${url}`, options);
         return data;
     } catch (error) {
@@ -18,3 +19,6 @@ export const fetchdata = async(url) => {
         throw error;
     }
 }
+
+
+

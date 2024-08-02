@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      {loading && <Loading/>}
+      {/* {loading && <Loading/>} */}
       <Navbar />
       {/* <Sidebar/> */}
       <Routes>

@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useRef } from 'react';
 
 function ListItems() {
@@ -25,7 +21,7 @@ function ListItems() {
   ];
 
   return (
-    <div className='relative px-4 flex items-center'>
+    <div className='relative flex items-center px-4'>
       {/* Left Arrow Button */}
       <button
         onClick={scrollLeft}
@@ -37,7 +33,7 @@ function ListItems() {
       {/* Scrollable List Container */}
       <div
         ref={containerRef}
-        className='flex space-x-4 flex-nowrap overflow-x-auto hide-scroll-bar ml-2'
+        className='flex ml-2 space-x-4 overflow-x-auto flex-nowrap hide-scroll-bar'
       >
         {categories.map((category) => (
           <div
@@ -52,7 +48,7 @@ function ListItems() {
       {/* Right Arrow Button */}
       <button
         onClick={scrollRight}
-        className="p-2 pl-4 text-white bg-gray-800 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none absolute right-0 top-1/2 transform -translate-y-1/2"
+        className="absolute right-0 p-2 pl-4 text-white transform -translate-y-1/2 bg-gray-800 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none top-1/2"
       >
         →
       </button>
