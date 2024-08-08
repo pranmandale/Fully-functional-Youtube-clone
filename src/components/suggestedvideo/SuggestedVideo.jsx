@@ -14,16 +14,14 @@ const abbreviateNumber = (num) => {
 };
 
 function SuggestedVideo({ video }) {
-    console.log(video);
-
     return (
         <div>
             <Link to={`/video/${video?.videoId}`}>
-                <div className='flex flex-col'>
+                <div className="flex mb-3 space-x-2">
                     {/* Thumbnail */}
-                    <div className='relative h-24 xl:h-20 w-40 min-w-[160px] lg:w-32 lg:min-w-[128px] xl:w-[160px] overflow-hidden duration-200 md:h-20 md:rounded-xl hover:rounded-none'>
+                    <div className="relative h-24 xl:h-20 w-48 min-w-[165px] max-w-[165px] lg:w-40 lg:min-w-[165px] lg:max-w-[165px] xl:w-[165px] overflow-hidden duration-200 md:h-20 md:rounded-xl hover:rounded-none">
                         <img
-                            className='w-full h-full'
+                            className="w-full h-full rounded-lg object-cover"
                             src={video?.thumbnails[0]?.url}
                             alt={video?.title || 'Video thumbnail'}
                         />
@@ -31,41 +29,29 @@ function SuggestedVideo({ video }) {
                     </div>
 
                     {/* Channel logo and video title */}
-                    <div className='flex mt-3 space-x-2'>
-                        {/* Channel logo */}
-                        <div className='flex items-start'>
-                            <div className='flex overflow-hidden border rounded-full h-9 w-9'>
-                                <img
-                                    className='w-full h-full'
-                                    src={video?.author?.avatar[0]?.url}
-                                    alt={video?.author?.title || 'Channel logo'}
-                                />
-                            </div>
-                        </div>
-
-                        {/* Title and channel name */}
-                        <div>
-                            <span className='text-sm font-bold line-clamp-2'>
-                                {video?.title}
+                    <div className="flex flex-col justify-start w-full">
+                        {/* Title */}
+                        <span className="text-sm font-bold line-clamp-2">
+                            {video?.title}
+                        </span>
+                        <div className="flex items-center mt-2 font-semibold">
+                            {/* Channel name */}
+                            <span className="text-sm text-gray-600">
+                                {video?.author?.title}
                             </span>
-                            <div className='flex items-center mt-2 font-semibold'>
-                                <span className='text-sm text-gray-600'>
-                                    {video?.author?.title}
-                                </span>
-                                {video?.author?.badges[0]?.type === 'VERIFIED_CHANNEL' && (
-                                    <BsFillCheckCircleFill className='text-gray-600 ml-1 text-[12px]' />
-                                )}
-                            </div>
-                            {/* Views and other information */}
-                            <div className='flex text-sm text-gray-600'>
-                                <span>
-                                    {`${abbreviateNumber(video?.stats?.views || 0)} views`}
-                                </span>
-                                <span className='flex text-[24px] leading-none font-bold relative top-[-10px] px-1'>
-                                    .
-                                </span>
-                                <span>{video?.publishedTimeText}</span>
-                            </div>
+                            {video?.author?.badges[0]?.type === 'VERIFIED_CHANNEL' && (
+                                <BsFillCheckCircleFill className="text-gray-600 ml-1 text-[12px]" />
+                            )}
+                        </div>
+                        {/* Views and published time */}
+                        <div className="flex text-sm text-gray-600">
+                            <span>
+                                {`${abbreviateNumber(video?.stats?.views || 0)} views`}
+                            </span>
+                            <span className="flex text-[24px] leading-none font-bold relative top-[-10px] px-1">
+                                .
+                            </span>
+                            <span>{video?.publishedTimeText}</span>
                         </div>
                     </div>
                 </div>

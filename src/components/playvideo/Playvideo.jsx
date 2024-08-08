@@ -116,7 +116,7 @@ function PlayingVideo() {
             {video?.stats?.comments || 0} <p>Comments</p>
           </div>
         </div>
-        <div className="flex flex-col px-4 py-6 h-[calc(100vh-4.625rem)] overflow-y-scroll overflow-x-hidden lg:w-[350px] xl:w-[400px]">
+        <div className="flex flex-col px-4 py-6 h-[calc(100vh-4.625rem)] overflow-y-scroll overflow-x-hidden lg:w-[350px] xl:w-[440px]">
           {relatedVideo?.contents?.map((item, index) => {
             if (item?.type !== "video") return false;
             return <SuggestedVideo key={index} video={item?.video} />;
